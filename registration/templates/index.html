@@ -12,6 +12,84 @@
     <meta content="Free HTML Templates" name="keywords">
     <meta content="Free HTML Templates" name="description">
 
+    <style>
+        nav{
+            background-color: white;
+            color: #fff;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+        }
+        nav ul{
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: inline-block;
+            position: relative;
+        }
+        nav ul li{
+            display: inline-block;
+            position: relative;
+        }
+        nav ul li a{
+            display: block;
+            padding: 0 15px;
+            color: black;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        nav ul li ul{
+            display: none;
+            position: absolute;
+            top:100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: whitesmoke;
+            z-index: 1;
+            white-space: nowrap;
+            min-width: 100%;
+        }
+        nav ul li:hover ul{
+            display: block;
+        }
+        nav ul li ul li{
+            display: block;
+        }
+        nav ul li ul li a{
+            display: block;
+            padding: 3px 6px;
+            font-size: 16px;
+            width: 100%;
+        }
+        @media (max-width: 768px){
+            nav ul{
+                flex-wrap: wrap;
+            }
+            nav ul li{
+                width: 100%;
+                text-align: center;
+            }
+            nav ul li ul{
+                position: static;
+                display: none;
+            }
+            nav ul li ul li{
+                display: block;
+            }
+            nav ul li ul li a{
+                padding: 10px 0;
+            }
+            nav ul li:hover ul{
+                display: block;
+                position: absolute;
+                width: 100%;
+            }
+        }
+        main{
+            padding-top: 80px;
+        }
+    </style>
+
     <!-- Favicon -->
     <link href="{% static 'img/favicon.ico' %}" rel="icon">
 
@@ -74,79 +152,26 @@
     </div>
     <!-- Topbar End -->
 
-<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: white;left: 15%;width: 80%;color: black;">
-  <div class="container-fluid">
-    <a class="navbar-" href="#"><font color="black">HOME</font></a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#"><font color="black">ABOUT</font></a>
-        </li>
-        
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
-            aria-expanded="false">
-            MEET THE PROVIDER
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+<nav>
+    <ul>
+        <li><a href="#">Home</a></li>
+            <li><a href="#">About</a>
             <ul>
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#"> Menu Link</a></li>
-              <li><a class="dropdown-item" href="#"> Menu Link</a></li>
-              <li><a class="dropdown-item" href="#"> Menu Link</a></li>
-              <li><a class="dropdown-item" href="#"> Menu Link</a></li>
+                <li><a href="#">Mission & Vision</a></li>
+                <li><a href="#">Meet the Providers</a></li>
             </ul>
-            <ul>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li><a class="dropdown-item" href="#"> Menu Link</a></li>
-              <li><a class="dropdown-item" href="#"> Menu Link</a></li>
-              <li><a class="dropdown-item" href="#"> Menu Link</a></li>
-            </ul>
-            <ul>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
-              <li><a class="dropdown-item" href="#"> Menu Link</a></li>
-              <li><a class="dropdown-item" href="#"> Menu Link</a></li>
-              <li><a class="dropdown-item" href="#"> Menu Link</a></li>
-              <li><a class="dropdown-item" href="#"> Menu Link</a></li>
-            </ul>
-          </div>
-        </li>
-       <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#"><font color="black">SERVICIES</font></a>
-        </li>
-        <li class="nav-item">
-          <a href="#" class="nav-link active"><font color="black">PATIENT RESOURCES</font></a>
-        </li>
-        <li class="nav-item">
-          <a href="#" class="nav-link active"><font color="black">TESTMONIALS</font></a>
-        </li>
-        <li class="nav-item">
-          <a  href="#" class="nav-link active"><font color="black">CONTACT</font></a>
-        </li>
-      </ul>
-      
-    </div>
-  </div>
+            </li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Testimonial</a></li>
+            <li><a href="#">Contact</a></li>
+    </ul>
 </nav>
 
 
  <!-- Topbar Start -->
     
     <!-- Topbar End -->
-
-
-    
-
-
-
-
-
-
-
+<main >
 
     <!-- Carousel Start -->
     <div class="container-fluid p-0 mb-5">
@@ -191,11 +216,8 @@
     </div>
     <!-- Carousel End -->
 
-<div class="w3-container w3-primary" style="background-color:  #034f84;max-height: 50%;">
-  <h1 style="color: #034f84;">I am a Heading</h1>
-  <h1 style="color: whitesmoke;"><center> Intergrity Health Group</h1></center><br>
-  <h4 style="color:lightblue"><center><p>Neurosurgery & Orthopedic Surgeons in Jacksonville, FL</h4></center></p>
-  <h4 style="color:#034f84;"><center><p>Neurosurgery & Orthopedic Surgeons in Jacksonville, FL</h4></center></p>
+<div class="w3-container w3-primary">
+  <img src="{% static 'img/Originallogo.png' %}" width="1460 px" height="400 px">
 </div>
     <!-- About Start -->
     <div class="container-fluid p-5">
@@ -207,7 +229,7 @@
             </div>
             <div class="col-lg-7">
                 <div class="mb-6">
-                    <center><img src="{% static 'img/logo1.PNG' %}"With="90"height="100"></center>
+                    <center><img src="{% static 'img/logo1.png' %}"With="90"height="100"></center>
                    <p> <h4 class="text-body mb-4" style="font-family: ;">EXCEPTIONAL SPINE & ORTHOPEDIC CARE IN NORTHEAST FLORIDA </h4></p>
                 </div>
                
@@ -215,12 +237,19 @@
                    
                     <div class="tab-content">
                         <div class="tab-pane fade show active" id="pills-1">
-                            <p>Integrity Spine & Orthopedics is the premier neurosurgery and general orthopedic practice in Jacksonville, Florida. We welcome adults from northeast Florida to our 7,000-square-foot, state-of-the-art medical facility.
-                                <p>
-
-                             Our team of providers includes board-certified and fellowship-trained orthopedic surgeons and neurosurgeons, certified physician assistants, and a professional staff known for genuinely caring about patients. We devote time to talking with each person, listening to their concerns, and explaining their current condition.</p>
-                             <p>
-                              Our team knows that patients with spine and orthopedic conditions can’t wait for treatment, so we schedule quick appointments.</p>
+                            <p>
+                                Integrity Aquatic Therapy & Orthopedics Centre has the vision of providing establishments
+                                set on the principles of competency,commitment,compassion,convenience and efficiency.
+                                We believe in being the true 'partners in health' for the community,ensuring that along with
+                                guidance,attention and care,expertise is delivered with cutting edge best practice,innovation
+                                and precision.
+                            </p>
+                            <p>
+                                At Integrity Aquatic Therapy & Orthopedics centre,we believe that the journey of success
+                                needs forces of passion & dedication.These are imperative pre-requisites for growth and
+                                quality performance and we want to evolve as a corporate health facility with a unique and
+                                competent strategy.
+                            </p>
                         </div>
                         <div class="tab-pane fade" id="pills-2">
                             <p class="text-secondary mb-0">Tempor erat elitr at rebum at at clita aliquyam consetetur. Diam dolor diam ipsum et, tempor voluptua sit consetetur sit. Aliquyam diam amet diam et eos sadipscing labore. Clita erat ipsum et lorem et sit, sed stet no labore lorem sit. Sanctus clita duo justo et tempor consetetur takimata eirmod, dolores takimata consetetur invidunt magna dolores aliquyam dolores dolore. Amet erat amet et magna</p>
@@ -249,7 +278,7 @@
             <div class="col-lg-4 col-md-6">
                 <div class="team-item position-relative">
                     <div class="position-relative overflow-hidden rounded">
-                        <img class="img-fluid w-100" src="{% static 'img/team-1.jpg' %}" alt="">
+                        <img class="img-fluid w-100" src="{% static 'img/eight.jpg' %}" alt="">
                         <div class="team-overlay">
                             <div class="d-flex align-items-center justify-content-start">
                                 <a class="btn btn-light btn-square rounded-circle mx-1" href="#"><i class="fab fa-twitter"></i></a>
@@ -269,7 +298,7 @@ Medical Director</p>
             <div class="col-lg-4 col-md-6">
                 <div class="team-item position-relative">
                     <div class="position-relative overflow-hidden rounded">
-                        <img class="img-fluid w-100" src="{% static 'img/team-2.jpg' %}" alt="">
+                        <img class="img-fluid w-100" src="{% static 'img/seven.jpg' %}" alt="">
                         
                     </div>
                     <div class="position-absolute start-0 bottom-0 w-100 rounded-bottom text-center p-4" style="background: rgba(34, 36, 41, .9);">
@@ -282,7 +311,7 @@ Medical Director</p>
                         <div class="col-lg-4 col-md-6">
                 <div class="team-item position-relative">
                     <div class="position-relative overflow-hidden rounded">
-                        <img class="img-fluid w-100" src="{% static 'img/team-2.jpg' %}" alt="">
+                        <img class="img-fluid w-100" src="{% static 'img/nine.jpg' %}" alt="">
                         
                     </div>
                     <div class="position-absolute start-0 bottom-0 w-100 rounded-bottom text-center p-4" style="background: rgba(34, 36, 41, .9);">
@@ -295,7 +324,7 @@ Medical Director</p>
              <div class="col-lg-4 col-md-6">
                 <div class="team-item position-relative">
                     <div class="position-relative overflow-hidden rounded">
-                        <img class="img-fluid w-100" src="{% static 'img/team-2.jpg' %}" alt="">
+                        <img class="img-fluid w-100" src="{% static 'img/one.jpg' %}" alt="">
                         
                     </div>
                     <div class="position-absolute start-0 bottom-0 w-100 rounded-bottom text-center p-4" style="background: rgba(34, 36, 41, .9);">
@@ -305,10 +334,48 @@ Medical Director</p>
                     </div>
                 </div>
             </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="team-item position-relative">
+                    <div class="position-relative overflow-hidden rounded">
+                        <img class="img-fluid w-100" src="{% static 'img/two.jpg' %}" alt="">
+                        
+                    </div>
+                    <div class="position-absolute start-0 bottom-0 w-100 rounded-bottom text-center p-4" style="background: rgba(34, 36, 41, .9);">
+                        <h5 class="text-uppercase text-light">Kourosh Tavanaiepour
+</h5>
+                        <p class="text-lowercase text-secondary m-0">D.O.UF Board-Certified Fellowship-Trained Neurosurgeon</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="team-item position-relative">
+                    <div class="position-relative overflow-hidden rounded">
+                        <img class="img-fluid w-100" src="{% static 'img/three.jpg' %}" alt="">
+                        
+                    </div>
+                    <div class="position-absolute start-0 bottom-0 w-100 rounded-bottom text-center p-4" style="background: rgba(34, 36, 41, .9);">
+                        <h5 class="text-uppercase text-light">Kourosh Tavanaiepour
+</h5>
+                        <p class="text-lowercase text-secondary m-0">D.O.UF Board-Certified Fellowship-Trained Neurosurgeon</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="team-item position-relative">
+                    <div class="position-relative overflow-hidden rounded">
+                        <img class="img-fluid w-100" src="{% static 'img/four.jpg' %}" alt="">
+                        
+                    </div>
+                    <div class="position-absolute start-0 bottom-0 w-100 rounded-bottom text-center p-4" style="background: rgba(34, 36, 41, .9);">
+                        <h5 class="text-uppercase text-light">Kourosh Tavanaiepour</h5>
+                        <p class="text-lowercase text-secondary m-0">D.O.UF Board-Certified Fellowship-Trained Neurosurgeon</p>
+                    </div>
+                </div>
+            </div>
                         <div class="col-lg-4 col-md-6">
                 <div class="team-item position-relative">
                     <div class="position-relative overflow-hidden rounded">
-                        <img class="img-fluid w-100" src="{% static 'img/team-2.jpg' %}" alt="">
+                        <img class="img-fluid w-100" src="{% static 'img/five.jpg' %}" alt="">
                         
                     </div>
                     <div class="position-absolute start-0 bottom-0 w-100 rounded-bottom text-center p-4" style="background: rgba(34, 36, 41, .9);">
@@ -319,10 +386,10 @@ Medical Director</p>
                     </div>
                 </div>
             </div>
-                        <div class="col-lg-4 col-md-6">
+            <div class="col-lg-4 col-md-6">
                 <div class="team-item position-relative">
                     <div class="position-relative overflow-hidden rounded">
-                        <img class="img-fluid w-100" src="{% static 'img/team-2.jpg' %}" alt="">
+                        <img class="img-fluid w-100" src="{% static 'img/six.jpg' %}" alt="">
                         
                     <div class="position-absolute start-0 bottom-0 w-100 rounded-bottom text-center p-4" style="background: rgba(34, 36, 41, .9);">
                          <h5 class="text-uppercase text-light">Christopher Mitchel
@@ -331,8 +398,8 @@ Medical Director</p>
                     </div>
                 </div>
             </div>
-            
         </div>
+        
     </div>
     <!-- Team End -->
     
@@ -344,302 +411,85 @@ Medical Director</p>
         <div class="mb-5 text-center"style="Scolor:#034f84;">
             <h1 class="display-3 text-uppercase mb-0" ><B style="color:#034f84;">SERVICES WE OFFER</B></h1>
         </div>
-        <div class="tab-class text-center">
-           
-            <div class="tab-content">
-                <div id="tab-1" class="tab-pane fade show p-0 active">
-                    <div class="row g-5">
-                        <div class="col-lg-3 col-md-4 col-sm-6" >
-                            <div class=" rounded text-center py-5 px-3" style="background-color:#87bdd8;">
-                                <h6 class="text-uppercase text-light mb-3">Back Pain
-</h6>
-                                <p>  <h5 class="text-uppercase text-#034f84"><b style="color:#1E90FF;">learn more</b></h5></p>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-4 col-sm-6">
-                            <div class="bg- rounded text-center py-5 px-3"style="background-color:#87bdd8;">
-                                <h6 class="text-uppercase text-light mb-3">Herniated Disc
-</h6>
-                              <p>  <h5 class="text-uppercase text-primary"><b style="color:#1E90FF;">learn more</b></h5></p>
-                                
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-4 col-sm-6">
-                            <div class="bg rounded text-center py-5 px-3"style="background-color:#87bdd8;">
-                                <h6 class="text-uppercase text-light mb-3">Spinal Stenosis</h6>
-                                
-                                <p>  <h5 class="text-uppercase text-primary"><b style="color:#1E90FF;">learn more</b></h5></p>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-4 col-sm-6">
-                            <div class="bg- rounded text-center py-5 px-3"style="background-color:#87bdd8;">
-                                <h6 class="text-uppercase text-light mb-3">Spinal Stenosis</h6>
-                                
-                                <p>  <h5 class="text-uppercase text-primary"><b style="color:#1E90FF;">learn more</b></h5></p>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-4 col-sm-6">
-                            <div class="bg- rounded text-center py-5 px-3"style="background-color:#87bdd8;">
-                                <h6 class="text-uppercase text-light mb-3">Disc Replacement
-</h6>
-                               <p>  <h5 class="text-uppercase text-primary"><b style="color:#1E90FF;">learn more</b></h5></p>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-4 col-sm-6">
-                            <div class="bg- rounded text-center py-5 px-3"style="background-color:#87bdd8;">
-                                <h6 class="text-uppercase text-light mb-3">Spine Fusion</h6>
-                                
-                               <p>  <h5 class="text-uppercase text-primary"><b style="color:#1E90FF;">learn more</b></h5></p>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-4 col-sm-6">
-                            <div class="bg- rounded text-center py-5 px-3" style="background-color:#87bdd8;">
-                                <h6 class="text-uppercase text-light mb-3">Pinched Nerve</h6>
-                                
-                               <p>  <h5 class="text-uppercase text-primary"><b style="color:#1E90FF;">learn more</b></h5></p>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-4 col-sm-6">
-                            <div class="bg- rounded text-center py-5 px-3" style="background-color:#87bdd8;">
-                               <h6 class="text-uppercase text-light mb-3">Pinched Nerve</h6>
-                                
-                               <p>  <h5 class="text-uppercase text-primary"style="background-color:#87bdd8;"><b style="color:#1E90FF;">learn more</b></h5></p>
-                            </div>
-                        </div>
+
+        <div class="row g-5">
+            <div class="col-lg-4 col-md-6">
+                <div class="team-item position-relative">
+                    <div class="position-relative overflow-hidden rounded">
+                        <img class="img-fluid w-100 " src="{% static 'img/1st-banner.jpg' %}" alt="">
                     </div>
                 </div>
-                <div id="tab-2" class="tab-pane fade p-0">
-                    <div class="row g-5">
-                        <div class="col-lg-3 col-md-4 col-sm-6">
-                            <div class="bg-dark rounded text-center py-5 px-3">
-                                <h6 class="text-uppercase text-light mb-3">Spinal Stenosis</h6>
-                                
-                                <p>  <h5 class="text-uppercase text-primary">learn more</h5></p>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-4 col-sm-6">
-                            <div class="bg-dark rounded text-center py-5 px-3">
-                                 <h6 class="text-uppercase text-light mb-3">Spinal Stenosis</h6>
-                                
-                                <p>  <h5 class="text-uppercase text-primary">learn more</h5></p>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-4 col-sm-6">
-                            <div class="bg-dark rounded text-center py-5 px-3">
-                                 <h6 class="text-uppercase text-light mb-3">Spinal Stenosis</h6>
-                                
-                                <p>  <h5 class="text-uppercase text-primary">learn more</h5></p>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-4 col-sm-6">
-                            <div class="bg-dark rounded text-center py-5 px-3">
-                                  <h6 class="text-uppercase text-light mb-3">Spinal Stenosis</h6>
-                                
-                                <p>  <h5 class="text-uppercase text-primary">learn more</h5></p>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-4 col-sm-6">
-                            <div class="bg-dark rounded text-center py-5 px-3">
-                                 <h6 class="text-uppercase text-light mb-3">Spinal Stenosis</h6>
-                                
-                                <p>  <h5 class="text-uppercase text-primary">learn more</h5></p>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-4 col-sm-6">
-                            <div class="bg-dark rounded text-center py-5 px-3">
-                                 <h6 class="text-uppercase text-light mb-3">Spinal Stenosis</h6>
-                                
-                                <p>  <h5 class="text-uppercase text-primary">learn more</h5></p>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-4 col-sm-6">
-                            <div class="bg-dark rounded text-center py-5 px-3">
-                                 <h6 class="text-uppercase text-light mb-3">Spinal Stenosis</h6>
-                                
-                                <p>  <h5 class="text-uppercase text-primary">learn more</h5></p>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-4 col-sm-6">
-                            <div class="bg-secondary rounded text-center py-5 px-3">
-                                  <h6 class="text-uppercase text-light mb-3">Spinal Stenosis</h6>
-                                
-                                <p>  <h5 class="text-uppercase text-primary">learn more</h5></p>
-                            </div>
-                        </div>
+
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="team-item position-relative">
+                    <div class="position-relative overflow-hidden rounded">
+                        <img class="img-fluid w-100 " src="{% static 'img/2nd.jpg' %}" alt="">
                     </div>
                 </div>
-                <div id="tab-3" class="tab-pane fade p-0">
-                    <div class="row g-5">
-                        <div class="col-lg-3 col-md-4 col-sm-6">
-                            <div class="bg-dark rounded text-center py-5 px-3">
-                                <h6 class="text-uppercase text-light mb-3">6.00am - 8.00am</h6>
-                                <h5 class="text-uppercase text-primary">Power Lifting</h5>
-                                <p class="text-uppercase text-secondary mb-0">John Deo</p>
-                            </div>
-                        </div>
-                        
-                        </div>
-                        
-                       
-                       
-                                            </div>
+
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="team-item position-relative">
+                    <div class="position-relative overflow-hidden rounded">
+                        <img class="img-fluid w-100 " src="{% static 'img/3rd-banner.jpg' %}" alt="">
+                    </div>
                 </div>
+
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="team-item position-relative">
+                    <div class="position-relative overflow-hidden rounded">
+                        <img class="img-fluid w-100 " src="{% static 'img/4th-banner.jpg' %}" alt="">
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="team-item position-relative">
+                    <div class="position-relative overflow-hidden rounded">
+                        <img class="img-fluid w-100 " src="{% static 'img/5th-banner.jpg' %}" alt="">
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="team-item position-relative">
+                    <div class="position-relative overflow-hidden rounded">
+                        <img class="img-fluid w-100 " src="{% static 'img/6-banner.jpg' %}" alt="">
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="team-item position-relative">
+                    <div class="position-relative overflow-hidden rounded">
+                        <img class="img-fluid w-100 " src="{% static 'img/7-banner.jpg' %}" alt="">
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="team-item position-relative">
+                    <div class="position-relative overflow-hidden rounded">
+                        <img class="img-fluid w-100 " src="{% static 'img/8-banner.jpg' %}" alt="">
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="team-item position-relative">
+                    <div class="position-relative overflow-hidden rounded">
+                        <img class="img-fluid w-100 " src="{% static 'img/9-banner.jpg' %}" alt="">
+                    </div>
+                </div>
+
             </div>
         </div>
+        
+        
     </div>
     <!-- Class Timetable Start -->
-
-
-
-<!-- Class Timetable Start -->
-    <div class="container-fluid p-5">
-        <div class="mb-5 text-center"style="color:#034f84;">
-            <h3 class="display-3 text-lowercase mb-1" ><B style="color:#034f84;">General Orthopedic Services</B></h3>
-        </div>
-        <div class="tab-class text-center">
-           
-            <div class="tab-content">
-                <div id="tab-1" class="tab-pane fade show p-0 active">
-                    <div class="row g-5">
-                        <div class="col-lg-3 col-md-4 col-sm-6" >
-                            <div class=" rounded text-center py-5 px-3" style="background-color:#87bdd8;">
-                                <h6 class="text-uppercase text-light mb-3">Back Pain
-</h6>
-                                <p>  <h5 class="text-uppercase text-#034f84"><b style="color:#1E90FF;">learn more</b></h5></p>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-4 col-sm-6">
-                            <div class="bg- rounded text-center py-5 px-3"style="background-color:#87bdd8;">
-                                <h6 class="text-uppercase text-light mb-3">Herniated Disc
-</h6>
-                              <p>  <h5 class="text-uppercase text-primary"><b style="color:#1E90FF;">learn more</b></h5></p>
-                                
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-4 col-sm-6">
-                            <div class="bg rounded text-center py-5 px-3"style="background-color:#87bdd8;">
-                                <h6 class="text-uppercase text-light mb-3">Spinal Stenosis</h6>
-                                
-                                <p>  <h5 class="text-uppercase text-primary"><b style="color:#1E90FF;">learn more</b></h5></p>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-4 col-sm-6">
-                            <div class="bg- rounded text-center py-5 px-3"style="background-color:#87bdd8;">
-                                <h6 class="text-uppercase text-light mb-3">Spinal Stenosis</h6>
-                                
-                                <p>  <h5 class="text-uppercase text-primary"><b style="color:#1E90FF;">learn more</b></h5></p>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-4 col-sm-6">
-                            <div class="bg- rounded text-center py-5 px-3"style="background-color:#87bdd8;">
-                                <h6 class="text-uppercase text-light mb-3">Disc Replacement
-</h6>
-                               <p>  <h5 class="text-uppercase text-primary"><b style="color:#1E90FF;">learn more</b></h5></p>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-4 col-sm-6">
-                            <div class="bg- rounded text-center py-5 px-3"style="background-color:#87bdd8;">
-                                <h6 class="text-uppercase text-light mb-3">Spine Fusion</h6>
-                                
-                               <p>  <h5 class="text-uppercase text-primary"><b style="color:#1E90FF;">learn more</b></h5></p>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-4 col-sm-6">
-                            <div class="bg- rounded text-center py-5 px-3" style="background-color:#87bdd8;">
-                                <h6 class="text-uppercase text-light mb-3">Pinched Nerve</h6>
-                                
-                               <p>  <h5 class="text-uppercase text-primary"><b style="color:#1E90FF;">learn more</b></h5></p>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-4 col-sm-6">
-                            <div class="bg- rounded text-center py-5 px-3" style="background-color:#87bdd8;">
-                               <h6 class="text-uppercase text-light mb-3">Pinched Nerve</h6>
-                                
-                               <p>  <h5 class="text-uppercase text-primary"style="background-color:#87bdd8;"><b style="color:#1E90FF;">learn more</b></h5></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div id="tab-2" class="tab-pane fade p-0">
-                    <div class="row g-5">
-                        <div class="col-lg-3 col-md-4 col-sm-6">
-                            <div class="bg-dark rounded text-center py-5 px-3">
-                                <h6 class="text-uppercase text-light mb-3">Spinal Stenosis</h6>
-                                
-                                <p>  <h5 class="text-uppercase text-primary">learn more</h5></p>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-4 col-sm-6">
-                            <div class="bg-dark rounded text-center py-5 px-3">
-                                 <h6 class="text-uppercase text-light mb-3">Spinal Stenosis</h6>
-                                
-                                <p>  <h5 class="text-uppercase text-primary">learn more</h5></p>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-4 col-sm-6">
-                            <div class="bg-dark rounded text-center py-5 px-3">
-                                 <h6 class="text-uppercase text-light mb-3">Spinal Stenosis</h6>
-                                
-                                <p>  <h5 class="text-uppercase text-primary">learn more</h5></p>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-4 col-sm-6">
-                            <div class="bg-dark rounded text-center py-5 px-3">
-                                  <h6 class="text-uppercase text-light mb-3">Spinal Stenosis</h6>
-                                
-                                <p>  <h5 class="text-uppercase text-primary">learn more</h5></p>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-4 col-sm-6">
-                            <div class="bg-dark rounded text-center py-5 px-3">
-                                 <h6 class="text-uppercase text-light mb-3">Spinal Stenosis</h6>
-                                
-                                <p>  <h5 class="text-uppercase text-primary">learn more</h5></p>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-4 col-sm-6">
-                            <div class="bg-dark rounded text-center py-5 px-3">
-                                 <h6 class="text-uppercase text-light mb-3">Spinal Stenosis</h6>
-                                
-                                <p>  <h5 class="text-uppercase text-primary">learn more</h5></p>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-4 col-sm-6">
-                            <div class="bg-dark rounded text-center py-5 px-3">
-                                 <h6 class="text-uppercase text-light mb-3">Spinal Stenosis</h6>
-                                
-                                <p>  <h5 class="text-uppercase text-primary">learn more</h5></p>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-4 col-sm-6">
-                            <div class="bg-secondary rounded text-center py-5 px-3">
-                                  <h6 class="text-uppercase text-light mb-3">Spinal Stenosis</h6>
-                                
-                                <p>  <h5 class="text-uppercase text-primary">learn more</h5></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                            </div>
-                        </div>
-                       
-                    </div>
-                </div>
-               
-                        </div>
-                        
-            
-                        
-                       
-                       
-                                            </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Class Timetable Start -->
-
 
     <!-- Hero Start -->
     <div class="container-fluid bg- py-1 mb-4 hero-header" style="background-image: url(img/4M0V3ED_image_crop_134071.jfif);
@@ -783,7 +633,7 @@ Medical Director</p>
     <!-- Testimonial End -->
 
 
-
+</main>
    
     <!-- Footer Start -->
     <div class="container-fluid bg- bg-dark text-secondary px-5 mt-5" style="background-color: #004883;color:black;">
