@@ -1,0 +1,316 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+    <style>
+        nav{
+            /* background-color: white; */
+            /* background-image: url({% static 'images/water.jpg'%}); */
+            color: #fff;
+            height: 80px;
+            line-height: 50px;
+            text-align: center;
+        }
+        nav ul{
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: inline-block;
+            position: relative;
+        }
+        nav ul li{
+            display: inline-block;
+            position: relative;
+        }
+        nav ul li a{
+            display: block;
+            padding: 0 20px;
+            color: black;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        nav ul li ul{
+            display: none;
+            position: absolute;
+            top:100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: whitesmoke;
+            z-index: 1;
+            white-space: nowrap;
+            min-width: 100%;
+        }
+        nav ul li:hover ul{
+            display: block;
+        }
+        nav ul li ul li{
+            display: block;
+        }
+        nav ul li ul li a{
+            display: block;
+            padding: 3px 6px;
+            font-size: 16px;
+            width: 100%;
+        }
+        @media (max-width: 768px){
+            nav ul{
+                flex-wrap: wrap;
+            }
+            nav ul li{
+                width: 100%;
+                text-align: center;
+            }
+            nav ul li ul{
+                position: static;
+                display: none;
+            }
+            nav ul li ul li{
+                display: block;
+            }
+            nav ul li ul li a{
+                padding: 10px 0;
+            }
+            nav ul li:hover ul{
+                display: block;
+                position: absolute;
+                width: 100%;
+            }
+        }
+    </style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Integrity Group</title>
+    <link rel="shortcut icon" href="{% static 'images/fav.png' %}" type="image/x-icon">
+   <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="{% static 'images/fav.jpg' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/all.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/animate.css' %}">
+    <link rel="stylesheet" href="{% static 'plugins/slider/css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'plugins/slider/css/owl.theme.default.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" />
+</head>
+
+<body>
+
+    <header class="continer-fluid ">
+        <div id="menu-jk" class="header-bottom">
+            <div class="container">
+                <div class="row nav-row">
+                    
+                    <nav>
+                        <a href="{% url 'index' %}">
+                            <img src="{% static 'images/newlogo.png' %}" height="70">
+                        </a>
+                        <ul>
+                            
+                            <li><a href="{% url 'index' %}">Home</a></li>
+                                <li><a href="{% url 'about' %}">About</a>
+                            
+                                </li>
+                                <li><a href="{% url 'team' %}">Meet The Providers</li>
+                                <li><a href="{% url 'service' %}">Services</a></li>
+                                <li><a href="#">Testimonial</a></li>
+                                <li><a href="{% url 'contact' %}">Contact</a></li>
+                                <li><a href="{% url 'patientReg'  %}" class="btn btn-outline-light btn-square-pill py-md-3 px-md-3 mx-2"style="background-color: #1E90FF">REQUEST AN APPOINTMENT</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div> 
+    </header>
+  <main>
+                 
+  <!-- ******************** Slider Starts Here ******************* -->
+    <div class="slider">
+        <!-- Set up your HTML -->
+        <div class="owl-carousel ">
+            <div class="slider-img">
+            </div>
+            <div class="item">
+                <div class="slider-img"><img src="{% static 'images/m2.jpg' %}" alt=""></div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-offset-2 col-lg-8 col-md-offset-2 col-md-8 col-sm-12 col-xs-12">
+                            <div class="slider-captions ">
+                                <!-- <h1 class="slider-title">It's time to help you.</h1> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="slider-img"><img src="{% static 'images/m3.jpg' %}" alt=""></div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-offset-2 col-lg-8 col-md-offset-2 col-md-8 col-sm-12 col-xs-12">
+                            <div class="slider-captions ">
+                                <!-- <h1 class="slider-title">Welcome to our integrity group</h1> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="slider-img"><img src="{% static 'images/m5.jpg' %}" alt=""></div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-offset-2 col-lg-8 col-md-offset-2 col-md-8 col-sm-12 col-xs-12">
+                            <div class="slider-captions ">
+                                <!-- <h1 class="slider-title">Welcome to our integrity group</h1> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>   
+    
+    <!--  ************************* About Us Starts Here ************************** -->    
+       
+<div class="about-us container-fluid">
+    <div class="container">
+
+        <div class="row natur-row no-margin w-700">
+            <div class="text-part col-md-6">
+                <h2>About Our Group</h2>
+                <p>Integrity Aquatic Therapy & Orthopedics Centre has the vision of providing establishments set on the principles of competency,commitment,compassion,convenience and efficiency.We believe in being the true 'partners in health' for the community,ensuring that along with guidance,attention and care,expertise is delivered with cutting edge best practice,innovation and precision. </p>
+                <p>  At Integrity Aquatic Therapy & Orthopedics centre,we believe that the journey of success
+                                needs forces of passion & dedication.These are imperative pre-requisites for growth and
+                                quality performance and we want to evolve as a corporate health facility with a unique and
+                                competent strategy.</p>
+
+            </div>
+            <div class="image-part col-md-6">
+                <div class="about-quick-box row">
+                    <div class="col-md-12">
+                        <img src="{% static 'images/img2.jpg' %}" alt="" width="1200">
+                    </div>
+                     
+                </div>
+            </div>
+        </div>
+    </div>
+</div>     
+   
+   
+ <!-- ################# Mission Vision Start Here #######################--->
+  
+ <section class="container-fluid mission-vision">
+    <div class="container">
+        <div class="row mission">
+            <div class="col-md-6 mv-det">
+                <h1>Our Mission</h1>
+                <p>
+                  To Provide the Best Care and Specialized
+Rehabilitation and Medical Services to the People
+and Community.We are Committed to Excellence
+in the Delivery of Rehabilitation and Medical
+Careina Cost-Effective and Timely Manner.
+                </p>
+            </div>
+            <div class="col-md-6 mv-img">
+                <img src="{% static 'images/m6.jpg' %}" alt="">
+            </div>
+        </div>
+        <div class="row vision">
+            <div class="col-md-6 mv-img">
+                 <img src="{% static 'images/m1.jpg' %}" alt="">
+            </div>
+            <div class="col-md-6 mv-det">
+                 <h1>Our Vision</h1>
+                 <p>
+                  To become a World-class Leading Aquatic
+Therapy & Orthopedic Centre in the
+Country and Region providing Client-centered
+Care with Evidence-Based Services.
+                 </p>
+            </div>
+        </div>
+    </div>
+</section>   
+  
+                 
+  <!--  ************************* Footer Starts Here ************************** -->
+          
+  <footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 col-sm-12">
+                <h2>About Us</h2>
+                <p>
+                    Integrity Aquatic Therapy & Orthopedics Centre has the vision of providing establishments set on the principles of competency,commitment,compassion,convenience and efficiency.We believe in being the true 'partners in health' for the community,ensuring that along with guidance,attention and care,expertise is delivered with cutting edge best practice,innovation and precision.
+                    </p>
+            </div>
+            <div class="col-md-4 col-sm-12">
+                <h2>Useful Links</h2>
+                <ul class="list-unstyled link-list">
+                    <li><a ui-sref="about" href="#/about">About us</a><i class="fa fa-angle-right"></i></li>
+                    <li><a ui-sref="portfolio" href="#/portfolio">Portfolio</a><i class="fa fa-angle-right"></i></li>
+                    <li><a ui-sref="products" href="#/products">Latest jobs</a><i class="fa fa-angle-right"></i></li>
+                    <li><a ui-sref="gallery" href="#/gallery">Gallery</a><i class="fa fa-angle-right"></i></li>
+                    <li><a ui-sref="contact" href="#/contact">Contact us</a><i class="fa fa-angle-right"></i></li>
+                </ul>
+            </div>
+            <div class="col-md-4 col-sm-12 map-img">
+                <h2>Contact Us</h2>
+                <address class="md-margin-bottom-40">
+                    Rwanda <br>
+                    Gasabo <br>
+                    Kimironko <br>
+                    Phone: +250 785 762 512 <br>
+                    Email: <a href="mailto:info@anybiz.com" class="">integrity@gmail.com</a><br>
+                    
+                </address>
+
+            </div>
+        </div>
+        
+        
+        <div class="nav-box row clearfix">
+            <div class="inner col-md-9 clearfix">
+                <ul class="footer-nav clearfix">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Gallery</a></li>
+                    <li><a href="#">Servies</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+
+              
+            </div>
+              <div class="donate-link col-md-3">
+                <button class="btn btn-outline-light btn-square-pill py-md-3 px-md-3 mx-2"style="background-color: orange">Contact Us</button>
+              </div>
+        </div>
+        
+    </div>
+    
+
+</footer>
+<div class="copy">
+        <div class="container">
+            <a href="#">All Rights Reserved | Designed and Developed by Integrity Health Group</a>
+            
+            <span>
+            <a><i class="fab fa-twitter"></i></a>
+            <a><i class="fab fa-facebook-f"></i></a>
+    </span>
+        </div>
+
+    </div>
+    
+</body>
+
+<script src="{% static 'js/jquery-3.2.1.min.js' %}"></script>
+<script src="{% static 'js/popper.min.js' %}"></script>
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+<script src="{% static 'plugins/scroll-fixed/jquery-scrolltofixed-min.js' %}"></script>
+<script src="{% static 'plugins/slider/js/owl.carousel.min.js' %}"></script>
+<script src="{% static 'js/script.js' %}"></script>
+
+</html>

@@ -80,7 +80,7 @@ WSGI_APPLICATION = 'health.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'integrity_db',
+        'NAME': 'integrityDB',
         'USER': 'postgres',
         'PASSWORD': 'hello',
         'HOST': 'localhost',

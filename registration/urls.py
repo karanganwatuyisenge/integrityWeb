@@ -12,5 +12,10 @@ urlpatterns = [
     path('showpatient/',showpatient,name='showpatient'),
     path('showemployee/',showemployee,name='showemployee'),
     # path('update/<int:id>',update,name='edit'),
-    path('admindashboard',admindashboard,name='admindashboard')
+    path('admindashboard',admindashboard,name='admindashboard'),
+    path('about',about,name='about'),
+    path('team',team,name='team'),
+    path('service',service,name='service'),
+    path('contact',contact,name='contact'),
+    path('patientReg',patientReg,name='patientReg')
 ]

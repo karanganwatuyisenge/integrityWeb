@@ -17,7 +17,6 @@ def index(request):
 
 def showpatient(request):  
     patient=Patient.objects.all()
-    
     return render(request,"dashboard.html",{'patient':patient})
 
 def showemployee(request):  
@@ -41,6 +40,20 @@ def registration(request):
         else:
             context['form'] = form
     return render(request,'employee.html',context)
+
+def patientReg(request):
+    context ={}
+    context['form'] =PatientForm()
+
+    if request.method=='POST':
+        form=PatientForm(request.POST,request.FILES)
+        if(form.is_valid()):
+            form.save()
+            return redirect('patientReg')
+        else:
+            context['form'] =form
+    return render(request,'patientReg.html',context)      
+
 
 def patientregistration(request):
     context = {}
@@ -95,3 +108,19 @@ def updatepatient(request, id):
 
 def admindashboard(request):
     return render(request, 'admin.html')
+
+def about(request):
+      return render(request,'about_us.html')
+
+def team(request):
+      return render(request,'team.html')
+
+def service(request):
+      return render(request,'services.html')
+
+# def testimonial(request):
+#       return render(request,'testimial.html')
+
+def contact(request):
+      return render(request,'contact_us.html')
+

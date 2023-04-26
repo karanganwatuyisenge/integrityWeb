@@ -1,0 +1,382 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+    <style>
+          nav {
+      background-color: white;
+      color: #fff;
+      height: 100px;
+      line-height: 30px;
+      text-align: center;
+      padding-top: 20px;
+    }
+    
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: inline-block;
+      position: relative;
+    }
+    
+    nav ul li {
+      display: inline-block;
+      position: relative;
+    }
+    
+    nav ul li a {
+      display: block;
+      padding: 0 15px;
+      color: black;
+      text-decoration: none;
+      font-size: 18px;
+    }
+    
+    nav ul li ul {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: whitesmoke;
+      z-index: 1;
+      white-space: nowrap;
+      min-width: 100%;
+    }
+    
+    nav ul li:hover ul {
+      display: block;
+    }
+    
+    nav ul li ul li {
+      display: block;
+    }
+    
+    nav ul li ul li a {
+      display: block;
+      padding: 3px 6px;
+      font-size: 16px;
+      width: 100%;
+    }
+    
+    @media (max-width: 768px) {
+      nav ul {
+        flex-wrap: wrap;
+      }
+      nav ul li {
+        width: 100%;
+        text-align: center;
+      }
+      nav ul li ul {
+        position: static;
+        display: none;
+      }
+      nav ul li ul li {
+        display: block;
+      }
+      nav ul li ul li a {
+        padding: 10px 0;
+      }
+      nav ul li:hover ul {
+        display: block;
+        position: absolute;
+        width: 100%;
+      }
+    }
+    
+    main {
+      padding-top: 50px;
+    }
+        .contact-card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 5px;
+  margin: 0 auto;
+  max-width: 1000px;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
+}
+
+.contact-card-section {
+  display: flex;
+  align-items: center;
+  margin-right: 40px;
+}
+
+.contact-card-section:last-child {
+  margin-right: 0;
+}
+
+.contact-card-section i {
+  font-size: 30px;
+  margin-right: 15px;
+  color: #8c8c8c;
+}
+
+.contact-card-section-text h4 {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.contact-card-section-text p {
+  font-size: 14px;
+  margin: 0;
+}
+main{
+    padding-top: 80px;
+}
+        
+/* *{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+} */
+.wrapper{
+  position: relative;
+  max-width: 430px;
+  width: 100%;
+  top: 3%;
+  left:35%;
+  background: #fff;
+  padding: 34px;
+  border-radius: 6px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+}
+.wrapper h2{
+  position: relative;
+  font-size: 22px;
+  font-weight: 600;
+  color: #333;
+}
+.wrapper h2::before{
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 28px;
+  border-radius: 12px;
+  background: #4070f4;
+}
+.wrapper form{
+  margin-top: 30px;
+}
+.wrapper form .input-box{
+  height: 52px;
+  margin: 18px 0;
+}
+
+form .input-box input{
+  height: 100%;
+  width: 100%;
+  outline: none;
+  padding: 0 15px;
+  font-size: 17px;
+  font-weight: 400;
+  color: #333;
+  border: 1.5px solid #C7BEBE;
+  border-bottom-width: 2.5px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+.input-box input:focus,
+.input-box input:valid{
+  border-color: #4070f4;
+}
+form .policy{
+  display: flex;
+  align-items: center;
+}
+form h3{
+  color: #707070;
+  font-size: 14px;
+  font-weight: 500;
+  margin-left: 10px;
+}
+.input-box.button input{
+  color: #fff;
+  letter-spacing: 1px;
+  border: none;
+  background: #4070f4;
+  cursor: pointer;
+}
+.input-box.button input:hover{
+  background: #0e4bf1;
+}
+form .text h3{
+ color: #333;
+ width: 100%;
+ text-align: center;
+}
+form .text h3 a{
+  color: #4070f4;
+  text-decoration: none;
+}
+form .text h3 a:hover{
+  text-decoration: underline;
+}
+footer{
+    padding-top: 400px;
+}
+    </style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Integrity Group</title>
+    <link rel="shortcut icon" href="{% static 'images/newlogo.png' %}" type="image/x-icon">
+   <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="{% static 'images/fav.jpg' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/all.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/animate.css' %}">
+    <link rel="stylesheet" href="{% static 'plugins/slider/css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'plugins/slider/css/owl.theme.default.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" />
+</head>
+<body>
+    <header class="continer-fluid ">
+        <div id="menu-jk" class="header-bottom">
+            <div class="container">
+                <div class="row nav-row">
+                    
+                    <nav>
+                        <a href="{% url 'index' %}">
+                            <img src="{% static 'images/newlogo.png' %}" height="70">
+                        </a>
+                        <ul>
+                            
+                            <li><a href="{% url 'index' %}">Home</a></li>
+                            <li>
+                                <a href="{% url 'about' %}">About</a>
+                                <ul>
+                                    <li><a href="#">Leadership Team</a></li>
+                                    <li><a href="#">Medical Team</a></li>
+                                    <li><a href="#">Administrative Team</a></li>
+                                    <li><a href="#">Support Team</a></li>
+                                    <li><a href="#">Quality Assurance Team</a></li>
+                                </ul>
+                            </li>                        
+                                <li><a href="{% url 'service' %}">Services</a></li>
+                                <li><a href="#">Testimonial</a></li>
+                                <li><a href="{% url 'contact' %}">Contact</a></li>
+                                <li><a href="{% url 'patientReg'  %}" class="btn btn-outline-light btn-square-pill py-md-3 px-md-3 mx-2"style="background-color: #1E90FF">REQUEST AN APPOINTMENT</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div> 
+    </header>
+    <main>
+    <div class="wrapper" >
+        <h2>Fill This Form To Request Appointment </h2>
+        <form method="POST">
+            {%csrf_token %}
+          <div class="input-box">
+            <input type="text" name="first_name" placeholder="Enter your First Name" required>
+          </div>
+          <div class="input-box">
+            <input type="text" name="last_name" placeholder="Enter your Last Name" required>
+          </div>
+          <div class="input-box">
+            <select placeholder="gender" name="gender">
+                <option selected>Select Gender</option>
+                <option>Female</option>
+                <option>Male</option>
+            </select>
+          </div>
+          <div>
+            <div class="input-box">
+                <input type="text" name="phone" placeholder="Enter your Phone Number" required>
+            </div> 
+            <div class="input-box">
+                <input type="date" name="appointment_date" placeholder="date" required>
+            </div>
+
+          </div>
+        
+          <div class="input-box button">
+            <input type="Submit" value="Request Now">
+          </div>
+          
+        </form>
+      </div>
+      <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-sm-12">
+                    <h2>About Us</h2>
+                    <p>
+                        Integrity Aquatic Therapy & Orthopedics Centre has the vision of providing establishments set on the principles of competency,commitment,compassion,convenience and efficiency.We believe in being the true 'partners in health' for the community,ensuring that along with guidance,attention and care,expertise is delivered with cutting edge best practice,innovation and precision.
+                        </p>
+                </div>
+                <div class="col-md-4 col-sm-12">
+                    <h2>Useful Links</h2>
+                    <ul class="list-unstyled link-list">
+                        <li><a ui-sref="about" href="#/about">About us</a><i class="fa fa-angle-right"></i></li>
+                        <li><a ui-sref="portfolio" href="#/portfolio">Portfolio</a><i class="fa fa-angle-right"></i></li>
+                        <li><a ui-sref="gallery" href="#/gallery">Gallery</a><i class="fa fa-angle-right"></i></li>
+                        <li><a ui-sref="contact" href="#/contact">Contact us</a><i class="fa fa-angle-right"></i></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 col-sm-12 map-img">
+                    <h2>Contact Us</h2>
+                    <address class="md-margin-bottom-40">
+                        Rwanda <br>
+                        Gasabo <br>
+                        Kimironko <br>
+                        Phone: 0791500813 <br>
+                        Email: <a href="mailto:info@anybiz.com" class="">info@ihgspecialityclinic.com</a><br>
+                        
+                    </address>
+    
+                </div>
+            </div>
+            
+            
+            <div class="nav-box row clearfix">
+                <div class="inner col-md-9 clearfix">
+                    <ul class="footer-nav clearfix">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Gallery</a></li>
+                        <li><a href="#">Servies</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+    
+                  
+                </div>
+                  <div class="donate-link col-md-3">
+                    <button class="btn btn-outline-light btn-square-pill py-md-3 px-md-3 mx-2"style="background-color: orange">Contact Us</button>
+                  </div>
+            </div>
+            
+        </div>
+        
+    
+    </footer>
+    <div class="copy">
+            <div class="container">
+                <a href="#">All Rights Reserved | Designed and Developed by Integrity Health Group</a>
+                
+                <span>
+                <a><i class="fab fa-twitter"></i></a>
+                <a><i class="fab fa-facebook-f"></i></a>
+        </span>
+            </div>
+    
+        </div>
+        
+    </body>
+    <script src="{% static 'js/jquery-3.2.1.min.js' %}"></script>
+<script src="{% static 'js/popper.min.js' %}"></script>
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+<script src="{% static 'plugins/scroll-fixed/jquery-scrolltofixed-min.js' %}"></script>
+<script src="{% static 'plugins/slider/js/owl.carousel.min.js' %}"></script>
+<script src="{% static 'js/script.js' %}"></script>
+    </html>
