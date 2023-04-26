@@ -79,14 +79,15 @@ WSGI_APPLICATION = 'health.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'integrityDB',
-        'USER': 'postgres',
-        'PASSWORD': 'hello',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'integrityDb',
+        'USER': 'integrity',
+        'PASSWORD': 'integrity12345',
         'HOST': 'localhost',
-        'PORT': '5432',
+        'PORT': '3306',
     }
 }
+
 
 
 # Password validation
