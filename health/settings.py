@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-)-d(=tyt$2j6^tr$lc0($mwg#dc57kq5_pb@nkqm6ashlb=yy)
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['ihgspecialityclinic.com','www.ihgspecialityclinic.com']
 
 
 # Application definition
@@ -77,14 +77,22 @@ WSGI_APPLICATION = 'health.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'integrityDb',
+#         'USER': 'integrity',
+#         'PASSWORD': 'integrity12345',
+#         'HOST': 'localhost',
+#         'PORT': '3306',
+#     }
+# }
+
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'integrityDb',
-        'USER': 'integrity',
-        'PASSWORD': 'integrity12345',
-        'HOST': 'localhost',
-        'PORT': '3306',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
 
